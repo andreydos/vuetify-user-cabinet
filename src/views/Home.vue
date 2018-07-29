@@ -3,6 +3,8 @@
         <v-slide-y-transition mode="out-in">
             <v-layout column align-center v-show="visible">
                 <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5">
+                <p>dfsdfsd</p>
+                <p>dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf dfsdfsdddsfsdf </p>
                 <v-stepper v-model="e6" vertical non-linear>
                     <v-stepper-step :complete="e6 !== 1"
                                     edit-icon="add" editable step="1">
