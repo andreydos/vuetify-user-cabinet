@@ -14,6 +14,7 @@
                         value="true"
                         v-for="(item, i) in items"
                         :key="i"
+                        @click="$router.push(item.route)"
                 >
                     <v-list-tile-action>
                         <v-icon v-html="item.icon"></v-icon>
@@ -46,9 +47,6 @@
         </v-toolbar>
         <v-content>
             <router-view/>
-            <my-transition>
-                <p v-show="showThis123">123</p>
-            </my-transition>
         </v-content>
         <v-navigation-drawer
                 temporary
@@ -82,33 +80,21 @@ export default {
       drawer: true,
       fixed: false,
       items: [{
-        icon: 'bubble_chart',
-        title: 'Inspire',
-      }],
+        icon: 'location_city',
+        title: 'Home',
+        route: '/',
+      },
+      {
+        icon: 'hearing',
+        title: 'About',
+        route: 'about',
+      },
+      ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js',
-      showThis123: false,
     };
-  },
-  mounted() {
-    setInterval(() => {
-      this.showThis123 = Math.random() > 0.5;
-    }, 2000);
   },
 };
 </script>
-<style lang="scss">
-    .my-transition {
-        &-leave-active {
-            position: absolute;
-        }
-        &-enter-active, &-leave, &-leave-to {
-            transition: opacity 4s ease-in-out;
-        }
-        &-enter, &-leave-to {
-            opacity: 0;
-        }
-    }
-</style>

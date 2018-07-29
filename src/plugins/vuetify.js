@@ -10,6 +10,8 @@ import {
   VGrid,
   VToolbar,
   transitions,
+  VStepper,
+  VCard,
 } from 'vuetify';
 import 'vuetify/src/stylus/app.styl';
 
@@ -24,6 +26,8 @@ Vue.use(Vuetify, {
     VGrid,
     VToolbar,
     transitions,
+    VStepper,
+    VCard,
   },
   theme: {
     primary: '#ee44aa',
