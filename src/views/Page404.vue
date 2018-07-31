@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: '404',
+  name: 'Page404',
   data() {
     return {
       visible: false,

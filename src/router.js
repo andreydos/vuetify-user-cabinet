@@ -10,7 +10,7 @@ import routes from './routes';
 Vue.use(VueRouter);
 Vue.use(VueMeta, {
   // The component option name that vue-meta looks for meta info on.
-  keyName: 'page',
+  key: 'page',
 });
 
 const router = new VueRouter({
@@ -27,6 +27,7 @@ const router = new VueRouter({
 });
 
 // Before each route evaluates...
+// eslint-disable-next-line
 router.beforeEach((routeTo, routeFrom, next) => {
   // Check if auth is required on this route
   // (including nested routes).

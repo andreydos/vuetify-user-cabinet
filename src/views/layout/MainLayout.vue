@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app light>
     <NavigationDrawer
       :clipped="clipped"
       :drawer="drawer"
@@ -14,6 +14,7 @@
       @drawer-change="drawer = $event"/>
     <v-content>
       <slot/>
+      <v-btn color="success">Success</v-btn>
     </v-content>
     <v-navigation-drawer
       temporary
