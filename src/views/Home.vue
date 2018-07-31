@@ -59,6 +59,15 @@
 import MainAppLayout from "@/views/layout/MainLayout.vue";
 export default {
   name: 'home',
+  page: {
+    title: 'Home',
+    meta: [{ name: 'description', content: '123' }],
+  },
+  metaInfo: {
+    title: 'home component',
+    // override the parent template and just use the above title only
+    // titleTemplate: null
+  },
   components: {
     MainAppLayout
   },

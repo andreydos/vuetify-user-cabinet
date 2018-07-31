@@ -8,10 +8,7 @@ import store from '@/store';
 import routes from './routes';
 
 Vue.use(VueRouter);
-Vue.use(VueMeta, {
-  // The component option name that vue-meta looks for meta info on.
-  key: 'page',
-});
+Vue.use(VueMeta);
 
 const router = new VueRouter({
   mode: 'history',

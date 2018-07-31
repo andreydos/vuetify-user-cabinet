@@ -11,6 +11,11 @@
 <script>
 export default {
   name: 'profile',
+  metaInfo: {
+    title: 'profile component',
+    // override the parent template and just use the above title only
+    // titleTemplate: null
+  },
   data() {
     return {
       visible: false,

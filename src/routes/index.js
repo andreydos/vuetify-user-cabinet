@@ -66,7 +66,7 @@ export default [
     name: 'about',
     component: () => lazyLoadView(import('@/views/Profile')),
     meta: {
-      authRequired: true,
+      // authRequired: true,
     },
     props: route => ({ user: store.state.auth.currentUser }),
   },

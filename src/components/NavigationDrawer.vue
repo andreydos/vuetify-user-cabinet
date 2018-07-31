@@ -44,7 +44,7 @@ export default {
         {
           icon: 'hearing',
           title: 'About',
-          route: 'about',
+          route: 'profile',
         },
       ],
     };

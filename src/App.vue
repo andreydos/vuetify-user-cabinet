@@ -11,6 +11,11 @@
 <script>
 export default {
   name: 'App',
+  metaInfo() {
+    return {
+      title: 'App main name',
+    };
+  },
 };
 </script>
 <style lang="scss">
