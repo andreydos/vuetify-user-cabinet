@@ -30,11 +30,11 @@ export default {
   name: 'NavigationDrawer',
   props: {
     clipped: {},
-    drawer: {},
     miniVariant: {},
   },
   data() {
     return {
+      drawer: true,
       items: [
         {
           icon: 'location_city',
@@ -49,5 +49,10 @@ export default {
       ],
     };
   },
+  watch: {
+    drawer(val) {
+      this.$emit('drawer-change', val);
+    }
+  }
 };
 </script>

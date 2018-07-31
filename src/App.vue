@@ -1,49 +1,36 @@
 <template>
-  <v-app>
-    <NavigationDrawer :clipped="clipped" :drawer="drawer" :mini-variant="miniVariant"/>
-    <HeaderToolbar :clipped="clipped"/>
-    <v-content>
-      <router-view/>
-    </v-content>
-    <v-navigation-drawer
-      temporary
-      :right="right"
-      v-model="rightDrawer"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-tile @click="right = !right">
-          <v-list-tile-action>
-            <v-icon>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer :fixed="fixed" app>
-      <span>&copy; 2017</span>
-    </v-footer>
-  </v-app>
+  <div id="app">
+    <!--
+    Even when routes use the same component, treat them
+    as distinct and create the component again.
+    -->
+    <router-view :key="$route.fullPath"/>
+  </div>
 </template>
 
 <script>
-import HeaderToolbar from './components/HeaderToolbar.vue';
-import NavigationDrawer from './components/NavigationDrawer.vue';
-
 export default {
   name: 'App',
-  components: { NavigationDrawer, HeaderToolbar },
-  data() {
-    return {
-      clipped: false,
-      drawer: true,
-      fixed: true,
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js',
-    };
-  },
 };
 </script>
+<style lang="scss">
+// Normalize default styles across browsers,
+// https://necolas.github.io/normalize.css/
+@import '~normalize.css/normalize.css';
+// Style loading bar between pages.
+// https://github.com/rstacruz/nprogress
+@import '~nprogress/nprogress.css';
+
+html {
+  margin: 0;
+}
+
+// ===
+// Vendor
+// ===
+
+#nprogress .bar {
+  background: red;
+}
+</style>
+

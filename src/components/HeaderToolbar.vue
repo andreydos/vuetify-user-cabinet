@@ -3,8 +3,8 @@
     app
     :clipped-left="clipped"
   >
-    <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-    <v-btn icon @click.stop="miniVariant = !miniVariant">
+    <v-toolbar-side-icon @click.stop="onDrawerChange"></v-toolbar-side-icon>
+    <v-btn icon @click.stop="onMiniVariantChange">
       <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
     </v-btn>
     <v-btn icon @click.stop="clipped = !clipped">
@@ -26,7 +26,22 @@ export default {
   name: 'HeaderToolbar',
   props: {
     clipped: Boolean,
+    drawer: Boolean,
+    miniVariant: Boolean,
+    title: String,
   },
+  data() {
+    return {
+    };
+  },
+  methods: {
+    onMiniVariantChange() {
+      this.$emit('mini-variant-change', !this.miniVariant)
+    },
+    onDrawerChange() {
+      this.$emit('drawer-change', !this.drawer)
+    }
+  }
 };
 </script>
 

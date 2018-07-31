@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-slide-y-transition mode="out-in">
       <v-layout column align-center v-show="visible">
-        <h2>This is about page</h2>
+        <h2>This is profile page</h2>
       </v-layout>
     </v-slide-y-transition>
   </v-container>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'about',
+  name: 'profile',
   data() {
     return {
       visible: false,
