@@ -3,7 +3,7 @@
     persistent
     :mini-variant="miniVariant"
     :clipped="clipped"
-    v-model="drawer"
+    v-model="navDrawer"
     enable-resize-watcher
     fixed
     app
@@ -31,10 +31,10 @@ export default {
   props: {
     clipped: {},
     miniVariant: {},
+    drawer: {},
   },
   data() {
     return {
-      drawer: true,
       items: [
         {
           icon: 'location_city',
@@ -43,16 +43,23 @@ export default {
         },
         {
           icon: 'hearing',
-          title: 'About',
+          title: 'Profile',
           route: 'profile',
         },
       ],
     };
   },
-  watch: {
-    drawer(val) {
-      this.$emit('drawer-change', val);
-    }
-  }
+  computed: {
+    navDrawer: {
+      get() {
+        return this.drawer;
+      },
+      set(newValue) {
+        if (this.navDrawer !== newValue) {
+          this.$emit('drawer-change', newValue);
+        }
+      }
+    },
+  },
 };
 </script>

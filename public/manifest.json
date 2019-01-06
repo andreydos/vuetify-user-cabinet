@@ -1,6 +1,6 @@
 {
-  "name": "cbc-cabinet-demo",
-  "short_name": "cbc-cabinet-demo",
+  "name": "user-cabinet",
+  "short_name": "user-cabinet",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",

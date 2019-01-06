@@ -11,29 +11,27 @@
       :miniVariant="miniVariant"
       :drawer="drawer"
       @mini-variant-change="miniVariant = $event"
-      @drawer-change="drawer = $event"/>
+      @drawer-change="drawer = $event"
+      @fixed-change="fixed = $event"
+      @drawer-right-change="rightDrawer = $event"/>
+
     <v-content>
+      <!--slot for views-->
       <slot/>
-      <v-btn color="success">Success</v-btn>
     </v-content>
+
     <v-navigation-drawer
       temporary
       :right="right"
       v-model="rightDrawer"
       fixed
       app
+      class="pa-2"
     >
-      <v-list>
-        <v-list-tile @click="right = !right">
-          <v-list-tile-action>
-            <v-icon>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
+      <h3>Additional info</h3>
     </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
-      <span>&copy; 2017</span>
+      <span>&copy; 2019</span>
     </v-footer>
   </v-app>
 </template>
@@ -48,12 +46,17 @@ export default {
     return {
       miniVariant: false,
       clipped: false,
-      drawer: true,
+      drawer: this.$vuetify.breakpoint.lgAndUp,
       fixed: true,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js',
+      title: 'User cabinet demo project',
     };
   },
+  watch: {
+    fixed(val) {
+      debugger
+    }
+  }
 };
 </script>

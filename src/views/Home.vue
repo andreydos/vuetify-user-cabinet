@@ -64,7 +64,7 @@ export default {
     meta: [{ name: 'description', content: '123' }],
   },
   metaInfo: {
-    title: 'home component',
+    title: 'Home',
     // override the parent template and just use the above title only
     // titleTemplate: null
   },
