@@ -45,6 +45,9 @@ export default [
     path: '/',
     name: 'home',
     component: () => lazyLoadView(import('@/views/Home')),
+    meta: {
+      // authRequired: true,
+    },
   },
   {
     path: '/login',
@@ -63,7 +66,7 @@ export default [
   },
   {
     path: '/profile',
-    name: 'about',
+    name: 'profile',
     component: () => lazyLoadView(import('@/views/Profile')),
     meta: {
       // authRequired: true,
@@ -119,9 +122,6 @@ export default [
     // params, such as `resource` to define what wasn't found.
     props: true,
   },
-  // Redirect any unmatched routes to the 404 page. This may
-  // require some server configuration to work in production:
-  // https://router.vuejs.org/en/essentials/history-mode.html#example-server-configurations
   {
     path: '*',
     redirect: '404',
