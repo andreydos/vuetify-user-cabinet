@@ -3,9 +3,8 @@
     <v-container fluid>
       <v-slide-y-transition mode="out-in">
         <v-layout column align-center v-show="visible">
-          <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5">
-          <v-stepper v-model="e6" vertical non-linear>
-            <v-stepper-step :complete="e6 !== 1"
+          <v-stepper v-model="step" vertical non-linear>
+            <v-stepper-step :complete="step !== 1"
                             edit-icon="add" editable step="1">
               Select an app
               <small>Summarize if needed</small>
@@ -13,40 +12,40 @@
 
             <v-stepper-content step="1">
               <v-card color="grey lighten-1" class="mb-5" height="200px"></v-card>
-              <v-btn color="primary" @click="e6 = 2">Continue</v-btn>
+              <v-btn color="primary" @click="step = 2">Continue</v-btn>
               <v-btn flat>Cancel</v-btn>
             </v-stepper-content>
 
-            <v-stepper-step :complete="e6 !== 2"
+            <v-stepper-step :complete="step !== 2"
                             edit-icon="add" editable step="2">
               Configure analytics for this app
             </v-stepper-step>
 
             <v-stepper-content step="2">
               <v-card color="grey lighten-1" class="mb-5" height="200px"></v-card>
-              <v-btn color="primary" @click="e6 = 3">Continue</v-btn>
+              <v-btn color="primary" @click="step = 3">Continue</v-btn>
               <v-btn flat>Cancel</v-btn>
             </v-stepper-content>
 
-            <v-stepper-step :complete="e6 !== 3"
+            <v-stepper-step :complete="step !== 3"
                             edit-icon="add" editable step="3">
               Select an ad format and name ad unit
             </v-stepper-step>
 
             <v-stepper-content step="3">
               <v-card color="grey lighten-1" class="mb-5" height="200px"></v-card>
-              <v-btn color="primary" @click="e6 = 4">Continue</v-btn>
+              <v-btn color="primary" @click="step = 4">Continue</v-btn>
               <v-btn flat>Cancel</v-btn>
             </v-stepper-content>
 
-            <v-stepper-step :complete="e6 !== 4"
+            <v-stepper-step :complete="step !== 4"
                             step="4" edit-icon="add" editable>
               View setup instructions
             </v-stepper-step>
             <v-stepper-content step="4">
               <v-card color="grey lighten-1" class="mb-5" height="200px"></v-card>
-              <v-btn color="primary" @click="e6 = 1">To start</v-btn>
-              <v-btn flat @click="e6 = 5">Close</v-btn>
+              <v-btn color="primary" @click="step = 1">To start</v-btn>
+              <v-btn flat @click="step = 5">Close</v-btn>
             </v-stepper-content>
           </v-stepper>
         </v-layout>
@@ -56,7 +55,8 @@
 </template>
 
 <script>
-import MainAppLayout from "@/views/layout/MainLayout.vue";
+import MainAppLayout from '@/views/layout/MainLayout.vue';
+
 export default {
   name: 'home',
   page: {
@@ -69,12 +69,12 @@ export default {
     // titleTemplate: null
   },
   components: {
-    MainAppLayout
+    MainAppLayout,
   },
   data() {
     return {
       visible: false,
-      e6: 1,
+      step: 1,
     };
   },
   mounted() {

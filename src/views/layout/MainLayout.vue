@@ -10,9 +10,11 @@
       :title="title"
       :miniVariant="miniVariant"
       :drawer="drawer"
+      :fixed="fixed"
       @mini-variant-change="miniVariant = $event"
       @drawer-change="drawer = $event"
       @fixed-change="fixed = $event"
+      @clipped-change="clipped = $event"
       @drawer-right-change="rightDrawer = $event"/>
 
     <v-content>
@@ -30,7 +32,7 @@
     >
       <h3>Additional info</h3>
     </v-navigation-drawer>
-    <v-footer :fixed="fixed" app>
+    <v-footer fixed app class="app-footer">
       <span>&copy; 2019</span>
     </v-footer>
   </v-app>
@@ -53,10 +55,16 @@ export default {
       title: 'User cabinet demo project',
     };
   },
-  watch: {
-    fixed(val) {
-      debugger
-    }
-  }
 };
 </script>
+<style lang="scss">
+  .app-footer {
+    justify-content: center;
+  }
+
+  .theme--light {
+    .app-footer {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #f5f5f5 10%, #f5f5f5 100%);
+    }
+  }
+</style>

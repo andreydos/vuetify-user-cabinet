@@ -29,7 +29,7 @@ html {
 }
 
 #nprogress .bar {
-  background: red;
+  background: #1976d2;
 }
 </style>
 
