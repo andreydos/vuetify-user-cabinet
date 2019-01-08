@@ -13,7 +13,12 @@ export default {
   name: 'App',
   metaInfo() {
     return {
-      title: 'user-cabinet',
+      title: 'Sells',
+      titleTemplate: titleChunk =>
+        // If undefined or blank then we don't need the hyphen
+        (this.$route.path !== '/'
+          ? `${titleChunk} - Sells`
+          : 'Sells'),
     };
   },
 };

@@ -1,4 +1,4 @@
-# vuetify-user-cabinet
+# sells client
 
 ## Project setup
 ```

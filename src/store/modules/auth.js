@@ -42,6 +42,7 @@ export const actions = {
   },
 
   logIn({ commit, dispatch, getters }, { username, password } = {}) {
+    debugger
     if (getters.loggedIn) return dispatch('validate');
 
     return axios.post('/api/login', { username, password })
@@ -63,10 +64,10 @@ export const actions = {
   // Validates the current user's token and refreshes it
   // with new data from the API.
   validate({ commit, state }) {
-    if (!state.currentUser) return Promise.resolve(null);
+    if (state.currentUser) return Promise.resolve(null);
 
     return axios
-      .get('/api/user')
+      .get('/api/login/validate')
       .then((response) => {
         const user = response.data;
         commit('SET_CURRENT_USER', user);

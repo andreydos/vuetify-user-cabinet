@@ -1,5 +1,5 @@
 {
-  "name": "vuetify-user-cabiner",
+  "name": "sells-client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -17,6 +17,8 @@
     "nprogress": "^0.2.0",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.16",
+    "vue-axios": "^2.1.4",
+    "vue-cookie": "^1.1.4",
     "vue-meta": "^1.5.2",
     "vue-router": "^3.0.1",
     "vuetify": "^1.0.19",

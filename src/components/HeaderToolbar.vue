@@ -41,7 +41,7 @@ export default {
     },
     onClippedChange() {
       this.$emit('clipped-change', !this.clipped);
-    }
-  }
+    },
+  },
 };
 </script>

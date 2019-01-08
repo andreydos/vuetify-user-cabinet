@@ -52,7 +52,7 @@ export default {
       fixed: true,
       right: true,
       rightDrawer: false,
-      title: 'User cabinet demo project',
+      title: 'Sells',
     };
   },
 };
